@@ -43,3 +43,8 @@ Mobile Payment:
 - **IFSC Code:** IFSC code of the bank account mentioned above.
 - **Aadhaar Number:** Aadhaar Number which will be used for receiving payments.
 - **Mobile Number:** Mobile Number which will be used for receiving payments.
+
+## Additional Information
+This project is licensed under the terms of the MIT license. For more details, see the [LICENSE](LICENSE) file in the repository.
+
+The source code for this project is available on GitHub. You can access it [here](https://github.com/VaibhavSys/ManualMultiPay).
