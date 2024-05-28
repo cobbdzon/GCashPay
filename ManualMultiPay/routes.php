@@ -1,0 +1,22 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Helpers\ExtensionHelper;
+use App\Models\Invoice;
+
+
+Route::get('/manualmultipay/payment/{order_id}', function ($order_id) {
+    $order_id_prefix = ExtensionHelper::getConfig('ManualMultiPay', 'order_id_prefix');
+    $invoiceId = (int) substr($order_id, strlen($order_id_prefix));
+    $total = Invoice::find($invoiceId)->total();
+    $payment_confirmation_eta = ExtensionHelper::getConfig('ManualMultiPay', 'payment_confirmation_eta');
+    $merchant_name = ExtensionHelper::getConfig('ManualMultiPay', 'merchant_name');
+    $payment_address_type = ExtensionHelper::getConfig('ManualMultiPay', 'payment_address_type');
+    $upi_address = ExtensionHelper::getConfig('ManualMultiPay', 'upi_address');
+    $bank_account_number = ExtensionHelper::getConfig('ManualMultiPay', 'bank_account_number');
+    $bank_ifsc_code = ExtensionHelper::getConfig('ManualMultiPay', 'bank_ifsc_code');
+    $aadhaar_number = ExtensionHelper::getConfig('ManualMultiPay', 'aadhaar_number');
+    $mobile_number = ExtensionHelper::getConfig('ManualMultiPay', 'mobile_number');
+    return view('ManualMultiPay::payment', ['order_id' => $order_id, 'total' => $total, 'payment_confirmation_eta' => $payment_confirmation_eta,'merchant_name' => $merchant_name, 'payment_address_type' => $payment_address_type, 'upi_address' => $upi_address, 'bank_account_number' => $bank_account_number, 'bank_ifsc_code' => $bank_ifsc_code, 'aadhaar_number' => $aadhaar_number, 'mobile_number' => $mobile_number]);
+
+})->name('ManualMultiPay.payment');
