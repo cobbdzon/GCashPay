@@ -8,7 +8,8 @@ use App\Models\Invoice;
 Route::get('/manualmultipay/payment/{order_id}', function ($order_id) {
     $order_id_prefix = ExtensionHelper::getConfig('ManualMultiPay', 'order_id_prefix');
     $invoiceId = (int) substr($order_id, strlen($order_id_prefix));
-    $total = Invoice::find($invoiceId)->total();
+    $invoice = Invoice::find($invoiceId);
+    $total = isset($invoice->credits) ? $invoice->credits : $invoice->total();
     $payment_confirmation_eta = ExtensionHelper::getConfig('ManualMultiPay', 'payment_confirmation_eta');
     $merchant_name = ExtensionHelper::getConfig('ManualMultiPay', 'merchant_name');
     $payment_address_type = ExtensionHelper::getConfig('ManualMultiPay', 'payment_address_type');
