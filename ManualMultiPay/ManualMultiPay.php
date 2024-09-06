@@ -45,6 +45,13 @@ class ManualMultiPay extends Gateway
                 'required' => false,
             ],
             [
+                'name' => 'conversion_rate',
+                'friendlyName' => 'Conversion Rate',
+                'type' => 'text',
+                'description' => 'Conversion rate for currency conversion',
+                'required' => false,
+            ],
+            [
                 'name' => 'merchant_name',
                 'friendlyName' => 'Merchant Name',
                 'type' => 'text',

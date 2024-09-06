@@ -27,7 +27,7 @@ Mobile Payment:
 1. Select the Payment Address Type (UPI Address, Bank Account Number, Aadhaar Number, Mobile Number)
 1. Fill the relevant payment address field and set the unused payment address fields to NA.
 1. Set an order ID prefix (optional)
-1. Set a payment confirmation ETA which will be shown to the user (optional)
+1. Set a payment confirmation ETA which will be shown to the user and the conversion rate (optional)
 1. Done! You are ready to accept payments.
 
 ![Settings](assets/settings.png)
@@ -36,6 +36,7 @@ Mobile Payment:
 - If you are not using the required payment information fields, you can set them to NA.
 - **Order ID Prefix (optional):** This is added before the order ID.
 - **Payment Confirmation ETA (optional):** Estimated time for confirmation of payment (eg- 24 Hours).
+- **Conversion Rate (optional):** The conversion rate of currency set in paymenter to INR.
 - **Merchant Name:** Name of the Merchant/Payee.
 - **Payment Address Type:** The payment address on which you want to receive payments. Available Options- UPI Address, Bank Account Number, Aadhaar Number, Mobile Number.
 - **UPI Address:** The UPI Address which will be used for receiveing payments.

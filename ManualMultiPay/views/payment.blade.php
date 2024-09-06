@@ -60,7 +60,8 @@ switch($payment_address_type) {
                                 @break
                         @endswitch
                         <div class="d-grid">
-                            <a id="payment-link" href="{{ $paymentLink }}" class="btn btn-primary btn-lg">Open Link on Phone (Requires UPI app)</a>
+                            <a id="payment-link" href="{{ $paymentLink }}" class="btn btn-primary btn-lg mt-2">Open Link on Phone (Requires UPI app)</a>
+                            <a href="{{ $back_invoice }}" class="btn btn-primary btn-lg mt-2">Back to Invoice</a>
                         </div>
                         <div class="alert alert-info mt-3" role="alert">
                             <p class="mb-3">Please note that payments are manually processed. After making your payment, please wait patiently for it to be confirmed. Thank you for your patience.</p>
