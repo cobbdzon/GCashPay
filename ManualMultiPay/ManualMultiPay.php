@@ -16,7 +16,7 @@ class ManualMultiPay extends Gateway
     {
         return [
             'display_name' => 'ManualMultiPay (MMP)',
-            'version' => '1.0.0',
+            'version' => '1.0.3',
             'author' => 'Vaibhav Dhiman',
             'website' => 'https://paymenter.org',
         ];
