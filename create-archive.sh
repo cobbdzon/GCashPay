@@ -26,7 +26,7 @@ fi
 mkdir ManualMultiPay
 cp ManualMultiPay.php ManualMultiPay
 cp routes.php ManualMultiPay
-cp ManualMultiPay.svg ManualMultiPay
+cp ManualMultiPay.png ManualMultiPay
 cp README.md ManualMultiPay
 cp LICENSE ManualMultiPay
 zip -r ManualMultiPay.zip ManualMultiPay
