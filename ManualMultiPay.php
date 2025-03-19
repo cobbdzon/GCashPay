@@ -3,8 +3,6 @@
 namespace Paymenter\Extensions\Gateways\ManualMultiPay;
 
 use App\Classes\Extension\Gateway;
-use App\Helpers\ExtensionHelper;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use App\Models\Invoice;
 use Illuminate\Support\Facades\View;

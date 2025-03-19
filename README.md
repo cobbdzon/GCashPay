@@ -1,6 +1,7 @@
 # ManualMultiPay (MMP) Gateway Extension
 
-> Supported Version: Paymenter V1 Beta
+> - Supported Version: Paymenter V1 Beta
+> - Extension Version: v2.0.0
 
 ManualMultiPay (MMP) is a gateway extension for Paymenter, an open-source hosting automation system. It enables you to accept payments through multiple methods, which are:
 
@@ -49,7 +50,6 @@ Mobile Payment:
 - If you are not using the required payment information fields, you can set them to NA.
 - **Order ID Prefix (optional):** This is added before the order ID.
 - **Payment Confirmation ETA (optional):** Estimated time for confirmation of payment (eg- 24 Hours).
-- **Conversion Rate (optional):** The conversion rate of currency set in paymenter to INR.
 - **Merchant Name:** Name of the Merchant/Payee.
 - **Payment Address Type:** The payment address on which you want to receive payments. Available Options- UPI Address, Bank Account Number, Aadhaar Number, Mobile Number.
 - **Allow Foreign Currency:** Check this if you want to allow the user to pay invoices which are in currencies other than INR (the invoice amount in the other currency will be the invoice amount in INR)
