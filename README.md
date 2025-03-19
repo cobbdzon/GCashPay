@@ -1,10 +1,23 @@
 # ManualMultiPay (MMP) Gateway Extension
 
-This is a gateway extension for Paymenter that allows you to accept payments through various methods: UPI Address, Bank Account, Aadhaar Number, and Mobile Number. The extension displays a QR code and payment information such as the payment address and other relevant details to the user. It also provides a button which, when clicked, automatically opens the user's payment app with the payment details pre-filled. **Only payments in INR are available.**
+> Supported Version: Paymenter V1 Beta
 
-The order ID is added as a transaction note to the payment. This makes it easy for both you and the user to keep track of payments and ensure that everything is processed correctly.
+ManualMultiPay (MMP) is a gateway extension for Paymenter, an open-source hosting automation system. It enables you to accept payments through multiple methods, which are:
 
-Please note that this extension **does not** handle payment confirmation or invoice marking. After a user makes a payment, you must manually confirm that the payment has been made and mark the invoice as paid. This extension is designed to facilitate the payment process, but the confirmation and invoice marking processes are still your responsibility.
+- UPI Address
+- Bank Account
+- Aadhaar Number
+- Mobile Number
+
+## Features & Functionality:
+
+- Displays a QR code and payment details for easy transactions.
+- Provides a one-click payment button to open the user's payment app with pre-filled details.
+- Supports payments in **INR** via UPI Address, Bank Account, Aadhaar Number, and Mobile Number.
+- Automatically adds the order ID as a transaction note for payment tracking which makes it easier to ensure that everything is processed correctly.
+
+
+> The extension **does not** handle payment confirmation or invoice marking. After a user makes a payment, you must manually confirm that the payment has been made and mark the invoice as paid. This extension is designed to facilitate the payment process, but the confirmation and invoice marking processes are still your responsibility.
 
 <details>
 <summary>Sample Screenshots
@@ -39,6 +52,7 @@ Mobile Payment:
 - **Conversion Rate (optional):** The conversion rate of currency set in paymenter to INR.
 - **Merchant Name:** Name of the Merchant/Payee.
 - **Payment Address Type:** The payment address on which you want to receive payments. Available Options- UPI Address, Bank Account Number, Aadhaar Number, Mobile Number.
+- **Allow Foreign Currency:** Check this if you want to allow the user to pay invoices which are in currencies other than INR (the invoice amount in the other currency will be the invoice amount in INR)
 - **UPI Address:** The UPI Address which will be used for receiveing payments.
 - **Bank Account Number:** The Bank Account Number which will be used for receiving payments.
 - **IFSC Code:** IFSC code of the bank account mentioned above.
