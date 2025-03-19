@@ -40,8 +40,8 @@ Mobile Payment:
 1. Select the Payment Address Type (UPI Address, Bank Account Number, Aadhaar Number, Mobile Number)
 1. Fill the relevant payment address field and set the unused payment address fields to NA.
 1. Set an order ID prefix (optional)
-1. Set a payment confirmation ETA which will be shown to the user and the conversion rate (optional)
-1. Done! You are ready to accept payments.
+2. Set a payment confirmation ETA which will be shown to the user (optional)
+3. Done! You are ready to accept payments.
 
 ![Settings](assets/settings.png)
 
