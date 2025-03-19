@@ -112,7 +112,7 @@ class ManualMultiPay extends Gateway
      */
     public function pay($invoice, $total)
     {
-        return route('mmp.pay', ['invoiceId' => $invoice->id]);
+        return route('extensions.gateways.mmp.pay', ['invoiceId' => $invoice->id]);
     }
 
     public function payment($invoiceId) {
