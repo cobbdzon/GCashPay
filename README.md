@@ -1,7 +1,7 @@
 # ManualMultiPay (MMP) Gateway Extension
 
 > - Supported Version: Paymenter V1 Beta
-> - Extension Version: v2.0.0
+> - Extension Version: v2.0.1
 
 ManualMultiPay (MMP) is a gateway extension for Paymenter, an open-source hosting automation system. It enables you to accept payments through multiple methods, which are:
 
