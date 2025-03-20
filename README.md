@@ -36,24 +36,27 @@ Mobile Payment:
 
 ## Getting Started
 1. Install the extension
-1. Enable the extension
-1. Set the Merchant Name (Payee Name)
-1. Select the Payment Address Type (UPI Address, Bank Account Number, Aadhaar Number, Mobile Number)
-1. Fill the relevant payment address field and set the unused payment address fields to NA.
-1. Set an order ID prefix (optional)
-2. Set a payment confirmation ETA which will be shown to the user (optional)
-3. Done! You are ready to accept payments.
+ - Replace `/var/www/paymenter` with your paymenter root if it is different
+ - **One-liner Install:** `git clone https://github.com/VaibhavSys/ManualMultiPay.git /var/www/paymenter/extensions/Gateways/ManualMultiPay`
+ - **Manual Install:** [Download](https://github.com/VaibhavSys/ManualMultiPay/releases/latest/download/ManualMultiPay.zip) the extension and extract it in `/var/www/paymenter/extensions/Gateways`
+2. Enable the extension
+3. Set the Merchant Name (Payee Name)
+4. Select the Payment Address Type (UPI Address, Bank Account Number, Aadhaar Number, Mobile Number)
+5. Fill the relevant payment address field and set the unused payment address fields to NA.
+6. Set an order ID prefix (optional)
+7. Set a payment confirmation ETA which will be shown to the user (optional)
+8. Done! You are ready to accept payments.
 
 ![Settings](assets/settings.png)
 
 ## Settings
 - If you are not using the required payment information fields, you can set them to NA.
 - **Order ID Prefix (optional):** This is added before the order ID.
-- **Payment Confirmation ETA (optional):** Estimated time for confirmation of payment (eg- 24 Hours).
+- **Payment Confirmation ETA (optional):** Estimated time for payment confirmation (eg- 24 Hours).
 - **Merchant Name:** Name of the Merchant/Payee.
 - **Payment Address Type:** The payment address on which you want to receive payments. Available Options- UPI Address, Bank Account Number, Aadhaar Number, Mobile Number.
-- **Allow Foreign Currency:** Check this if you want to allow the user to pay invoices which are in currencies other than INR (the invoice amount in the other currency will be the invoice amount in INR)
-- **UPI Address:** The UPI Address which will be used for receiveing payments.
+- **Allow Foreign Currency:** Enable this option to allow users to pay invoices in non-INR currencies. The invoice amount will be considered equivalent to the INR amount.
+- **UPI Address:** The UPI Address which will be used for receiving payments.
 - **Bank Account Number:** The Bank Account Number which will be used for receiving payments.
 - **IFSC Code:** IFSC code of the bank account mentioned above.
 - **Aadhaar Number:** Aadhaar Number which will be used for receiving payments.
