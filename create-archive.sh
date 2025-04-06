@@ -25,6 +25,7 @@ fi
 
 mkdir ManualMultiPay
 cp -r assets ManualMultiPay
+cp -r resources ManualMultiPay
 cp ManualMultiPay.php ManualMultiPay
 cp routes.php ManualMultiPay
 cp ManualMultiPay.png ManualMultiPay
