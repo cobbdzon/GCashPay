@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Paymenter\Extensions\Gateways\ManualMultiPay\ManualMultiPay;
+use Paymenter\Extensions\Gateways\GCashPay\GCashPay;
 
-Route::get('/extensions/mmp/pay/{invoiceId}', [ManualMultiPay::class, 'payment'])->name('extensions.gateways.mmp.pay');
+Route::get("/extensions/gcp/pay/{invoiceId}", [
+    GCashPay::class,
+    "payment",
+])->name("extensions.gateways.gcp.pay");
