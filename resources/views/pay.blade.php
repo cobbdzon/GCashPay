@@ -12,7 +12,7 @@
             <div class="col-lg-6">
                 <div class="card shadow-lg">
                     <div class="card-body p-5">
-                        <img src="/assets/images/gcash.svg" alt="GCash Logo" class="img-fluid mb-4 mx-auto d-block" style="width: 100px; height: 100px;">
+                        <img src="{{ $invoiceLogoUrl }}" alt="GCash Logo" class="img-fluid mb-4 mx-auto d-block" style="width: 100px; height: 100px;">
                         <h1 class="mb-4 text-center">Pay with GCash or Maya</h1>
                         <h2 class="text-center mb-3">Order ID: <span class="text-primary">{{ $orderId }}</span></h2>
                         <h2 class="text-center mb-3">Total: <span class="text-primary">{{ $total }}</span></h2>

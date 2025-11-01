@@ -28,7 +28,7 @@ class GCashPay extends Gateway
                 "name" => "merchant_name",
                 "label" => "Merchant Name",
                 "type" => "text",
-                "description" => "Merchant Name",
+                "description" => "The name you use in GCash or Maya",
                 "required" => true,
             ],
             [
@@ -42,14 +42,30 @@ class GCashPay extends Gateway
                 "name" => "order_prefix",
                 "label" => "Order Prefix",
                 "type" => "text",
-                "description" => "Order Prefix",
+                "default" => "G",
+                "required" => false,
+            ],
+            [
+                "name" => "eta_description",
+                "label" => "ETA Description",
+                "type" => "text",
+                "default" =>
+                    "Please note that payments are manually processed. After making your payment, please wait patiently for it to be confirmed. Thank you for your patience.",
                 "required" => false,
             ],
             [
                 "name" => "payment_confirmation_eta",
                 "label" => "Payment Confirmation ETA",
                 "type" => "text",
+                "default" => "24h",
                 "required" => false,
+            ],
+            [
+                "name" => "invoice_logo_url",
+                "label" => "Invoice Logo URL",
+                "type" => "text",
+                "default" => "https://placehold.co/1200x800",
+                "description" => "URL to GCash Logo or anything you want",
             ],
         ];
     }
@@ -97,7 +113,7 @@ class GCashPay extends Gateway
                 " " .
                 $paymentConfirmationEta .
                 " " .
-                $mobileNumber
+                $mobileNumber,
         );
 
         return view("gateways.gcp::pay", [
@@ -108,6 +124,7 @@ class GCashPay extends Gateway
             "returnUrl" => route("invoices.show", ["invoice" => $invoice->id]),
             "paymentConfirmationEta" => $paymentConfirmationEta,
             "mobileNumber" => $mobileNumber,
+            "invoiceLogoUrl" => $this->config("invoice_logo_url"),
         ]);
     }
 }
