@@ -81,7 +81,7 @@ class GCashPay extends Gateway
                 ->route("invoices.show", ["invoice" => $invoice->id])
                 ->with("error", "Invoice must be pending");
         }
-        $total = $invoice->remaining;
+        $total = $invoice->currency_code . " " . $invoice->remaining;
         $orderId = $this->config("order_prefix") . $invoiceId;
         $merchantName = $this->config("merchant_name");
         $mobileNumber = $this->config("mobile_number");
