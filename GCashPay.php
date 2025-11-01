@@ -34,7 +34,7 @@ class GCashPay extends Gateway
             [
                 "name" => "mobile_number",
                 "label" => "Mobile Number",
-                "type" => "number",
+                "type" => "text",
                 "required" => true,
                 "description" => "Mobile number registered with GCash",
             ],
