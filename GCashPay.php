@@ -64,7 +64,7 @@ class GCashPay extends Gateway
                 "name" => "invoice_logo_url",
                 "label" => "Invoice Logo URL",
                 "type" => "text",
-                "default" => "https://placehold.co/1200x800",
+                "default" => "/assets/images/gcash.svg",
                 "description" => "URL to GCash Logo or anything you want",
             ],
         ];
